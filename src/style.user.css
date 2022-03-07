@@ -1,11 +1,115 @@
 /* ==UserStyle==
 @name           unifiedbeautified-rbx
-@namespace      github.com/cwillsey06/unifiedbeautified-rbx
-@version        0.0.1
+@namespace      https://github.com/cwillsey06
+
+@homepageURL    https://github.com/cwillsey06/unifiedbeautified-rbx
+@supportURL     https://github.com/cwillsey06/unifiedbeautified-rbx/issues
+@updateURL      https://github.com/cwillsey06/unifiedbeautified-rbx/raw/main/src/style.user.css
+
+@version        0.1
 @description    a spiritual successor to my ancient 'animatedrbx' style from mid-2019 :) 
 @author         Coltrane Willsey
+
+@preprocessor   stylus
+
+@advanced text radius "Corner Radius (px)" 6px
 ==/UserStyle== */
 
 @-moz-document domain("roblox.com") {
-    
+:root {
+    --radius: radius;
+}
+
+/* global */
+    /* font-face */
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+        
+    }
+
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdu.woff2) format('woff2');
+        font-style: normal;
+        font-weight: 200;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    :not(code):not(pre):not(#⁠):not(#⁠):not(#⁠) {
+        font-family: 'Source Sans Pro', 'Source Sans Pro-ExtraLight', 'default-icons-desktop', 'FontAwesome', 'ac_iconset', 'fontello', 'pictonic', 'Noticons', 'Dashicons', 'consumer-icons', 'Elusive-Icons', 'Material Icons Extended'!important;
+    }
+
+    /* rounded corners */
+    #game-details-carousel-container,
+    #horizontal-tabs,
+    .section-content,
+    .avatar-back {
+        border-radius: var(--radius);
+    }
+        /* special cases */
+        .profile-avatar-left {
+            border-radius: var(--radius) 0px 0px var(--radius) !important;
+        }
+
+        .profile-avatar-mask {
+            border-radius: 0px var(--radius) var(--radius) 0px !important;
+        }
+
+        .rbx-tab-heading {
+            background-color: transparent !important;
+        }
+
+/* topbar */
+    #header {
+        border-bottom: 0px;
+    }
+
+/* sidebar */
+    .rbx-left-col {
+        border-right: 0px !important;
+        box-shadow: none !important;
+    }
+
+/* chat */
+    .chat-container.collapsed #chat-main {
+        width: min-content;
+    }
+
+/* footer */
+    .footer-links {
+        display: none !important;
+    }
+
+    .copyright-container {
+        border: 0px;
+    }
+
+/* ANIMATION-REF */
+}
+
+@-moz-document domain("roblox.com/Develop") {
+:root {
+--radius: radius;   
+}
+
+/* legacy style pages */
+/* global */
+    /* rounded corners */
+    #MyCreationsTabLink,
+    #LibraryTabLink,
+    #DevExTabLink,
+    #PayoutTabLink {
+        border-radius: var(radius) var(radius) 0px 0px;
+    }
+
+    .tab-item.tab-item-selected {
+        border-radius: var(radius) 0px 0px var(radius);
+    }
+
+    .btn-control {
+        border-radius: 25px;
+    }
+
+/* ANIMATION-REF */
 }
