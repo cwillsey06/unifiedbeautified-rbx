@@ -70,6 +70,27 @@
         border-right: 0px !important;
         box-shadow: none !important;
     }
+    .rbx-left-col li {
+        overflow: visible;
+    }
+
+    /* transitions */
+        .simplebar-content ul li {
+            transition: all 0.4s;
+            width: 30px;
+            opacity: 0.5;
+            overflow: hidden;
+            text-overflow: clip;
+            margin-bottom: 15px !important;
+            margin-left: 0px !important;
+            border: none;
+        }
+        .simplebar-content ul li:hover {
+            transition: all 0.1s !important;
+            margin-left: 2.5px !important;
+            width: 130px !important;
+            opacity: 1 !important;
+        }
 
 /* chat */
     .chat-container.collapsed #chat-main {
