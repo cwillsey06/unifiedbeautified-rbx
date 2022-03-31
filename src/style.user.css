@@ -15,7 +15,7 @@
 @advanced text radius "Corner Radius (px)" 6px
 ==/UserStyle== */
 
-@-moz-document url-prefix("roblox.com") {
+@-moz-document url-prefix("https://www.roblox.com/") {
 :root {
     --radius: radius;
 }
